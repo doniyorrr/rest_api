@@ -1,0 +1,25 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "| Route | HTTP Verb\t | POST body\t | Description\t |\r | --- | --- | --- | --- |\r | /api/movies | `GET` | Empty | List all movies. |\r | /api/movies | `POST` | {'title':'foo', 'category':'bar', 'country':'Uzbekistan', year:1990, director:\"id\", imdb_score: 9.7 } | Create a new movie. |\r | /api/movies/:movie_id | `GET` | Empty | Get a movie. |\r | /api/movies/:movie_id | `PUT` | {'name':'foo', 'surname':'bar'} | Update a movie with new info. |\r | /api/movies/:movie_id | `DELETE` | Empty | Delete a movie. |\r | /api/movies/top10 | `GET` | Empty | Get the top 10 movies. |\r | /api/movies/between/:start_year/:end_year | `GET` | Empty | Movies between two dates. |",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doniyorrr/rest_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doniyorrr/rest_api/issues"
+  },
+  "homepage": "https://github.com/doniyorrr/rest_api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.6",
+    "pug": "^3.0.2"
+  }
+}
