@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const port = 3000
 const path = require('path')
 const r_Index = require('./routers/index')
+const r_Director = require('./routers/direct')
 const app = express()
 
 //==================== settings mongoose
@@ -30,6 +31,7 @@ app.set('view engine' , 'pug')
 app.set('views' , path.join(__dirname , "views"))
 
 app.use('/api/movies' , r_Index)
+app.use('/api/directors' , r_Director)
 
 app.listen(port , () =>{
     console.log(`server http://localhost:${port} da ishladi`)
